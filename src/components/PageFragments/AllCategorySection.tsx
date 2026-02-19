@@ -176,7 +176,6 @@ const AllCategorySection = () => {
       </div>
 
       <TrustBadges />
-      <BuyAccessories />
 
       {/* New Arrivals Section */}
       <div className="max-w-[1256px] mx-auto px-4 py-10 sm:py-16">
@@ -279,6 +278,7 @@ const AllCategorySection = () => {
           }
         </div>
       </div>
+      <BuyAccessories />
     </>
   );
 };
