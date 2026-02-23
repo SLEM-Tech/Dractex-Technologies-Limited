@@ -169,7 +169,7 @@ const AllCategorySection = () => {
           </p>
           <Link
             href="/category"
-            className="mt-8 inline-block bg-[#E91E8C] hover:bg-[#d4177f] text-white text-xs md:text-sm font-bold uppercase tracking-[0.2em] px-8 py-3.5 rounded transition-colors">
+            className="mt-8 inline-block bg-primary hover:bg-primary-hover text-white text-xs md:text-sm font-bold uppercase tracking-[0.2em] px-8 py-3.5 rounded transition-colors">
             Explore Shop
           </Link>
         </div>
@@ -180,24 +180,24 @@ const AllCategorySection = () => {
       {/* New Arrivals Section */}
       <div className="max-w-[1256px] mx-auto px-4 py-10 sm:py-16">
         {/* Section Header */}
-        <div className="flex items-end justify-between mb-8">
+        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 gap-4">
           <div>
-            <p className="text-sm text-emerald-500 font-medium mb-1">
+            <p className="text-xs sm:text-sm text-emerald-500 font-medium mb-1">
               Check out latest products
             </p>
-            <h2 className="text-2xl sm:text-3xl font-black text-black tracking-tight">
+            <h2 className="text-xl sm:text-3xl font-black text-black tracking-tight">
               New Arrivals
             </h2>
           </div>
           <Link
             href="/category"
-            className="border border-gray-300 text-black text-xs sm:text-sm font-semibold uppercase tracking-wider px-5 py-2.5 rounded hover:bg-black hover:text-white transition-colors">
+            className="border border-gray-300 text-black text-[10px] sm:text-sm font-semibold uppercase tracking-wider px-4 py-2 sm:px-5 sm:py-2.5 rounded hover:bg-black hover:text-white transition-colors w-fit">
             View All
           </Link>
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6">
           {latestProducts.length > 0 ?
             latestProducts.slice(0, 4).map((product: ProductType) => {
               const price = parseInt(product?.price || "0");
@@ -212,7 +212,7 @@ const AllCategorySection = () => {
                   {/* Image Container */}
                   <Link
                     href={`/home-item/product/${slugDesc}-${product.id}`}
-                    className="relative aspect-square bg-[#F5F5F5] rounded-lg overflow-hidden flex items-center justify-center mb-4">
+                    className="relative aspect-square bg-neutral rounded-lg overflow-hidden flex items-center justify-center mb-4">
                     {/* AVAILABLE Badge */}
                     {product?.stock_status === "instock" && (
                       <span className="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded z-10">
@@ -259,7 +259,7 @@ const AllCategorySection = () => {
                           image: product?.images?.[0]?.src,
                         })
                       }
-                      className="w-full bg-[#E91E8C] hover:bg-[#d4177f] text-white text-xs sm:text-sm font-bold py-2.5 rounded transition-colors cursor-pointer">
+                      className="w-full bg-primary hover:bg-primary-hover text-white text-xs sm:text-sm font-bold py-2.5 rounded transition-colors cursor-pointer">
                       {cartItem ? "Added ✓" : "Add to cart"}
                     </button>
                   )}

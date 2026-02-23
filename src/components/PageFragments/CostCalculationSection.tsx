@@ -191,7 +191,7 @@ const CostCalculationSection = () => {
       }
       monthElements.push(
         <div key={i}>
-          <hr className="text-[#E9E9E9] w-full" />
+          <hr className="text-neutral-border w-full" />
           <div className="flex justify-between my-6 ">
             <div className="flex flex-col gap-4">
               <h4 className="text-xs sm:text-sm leading-[1.3] text-secondary-200">
@@ -214,17 +214,17 @@ const CostCalculationSection = () => {
   return (
     <section className="">
       {!paylater ?
-        <div className="flex flex-col bg-white border-[1px] border-[#E9E9E9]">
+        <div className="flex flex-col bg-white border-[1px] border-neutral-border">
           <h4 className="text-center py-3 sm:py-6 text-sm sm:text-base font-[400] leading-[1.3] text-secondary-200">
             Cost Calculator
           </h4>
-          <hr className="text-[#E9E9E9] w-full" />
+          <hr className="text-neutral-border w-full" />
           <h4 className="text-center px-3 md:px-12 pt-2 sm:pt-4 pb-3 sm:pb-6 text-xs sm:text-sm font-[400] leading-[1.8] text-secondary-200">
             Select product to see the payment plan
           </h4>
         </div>
       : <>
-          <div className="flex flex-col bg-white border-[1px] border-[#E9E9E9] pt-5 px-6 transition">
+          <div className="flex flex-col bg-white border-[1px] border-neutral-border pt-5 px-6 transition">
             <div className="flex flex-col gap-3 sm:gap-4 mb-4">
               <h4 className="text-xs sm:text-sm font-[400] leading-[1.3] text-secondary-200">
                 Available Plan
@@ -233,7 +233,7 @@ const CostCalculationSection = () => {
                 {paylater[0].months} Months
               </h4>
             </div>
-            <hr className="text-[#E9E9E9] w-full" />
+            <hr className="text-neutral-border w-full" />
             <div className="flex justify-between my-4">
               <div className="flex flex-col gap-4">
                 <h4 className="text-xs sm:text-sm font-[400] leading-[1.3] text-secondary-200">
@@ -277,7 +277,7 @@ const CostCalculationSection = () => {
 						</div>
 						<hr className='text-[#E9E9E9] w-full' /> */}
 
-            <div className="flex gap-5 bg-[#D1FAE5] px-5 py-2 my-3">
+            <div className="flex gap-5 bg-status-successBg px-5 py-2 my-3">
               <h4 className="text-sm sm:text-base">Total</h4>
               <h4 className="text-sm sm:text-base text-primary-300 font-bold">
                 {Total && FormatMoney2(Total)}

@@ -19,7 +19,7 @@ const FaqAccordionItem: React.FC<FaqAccordionItemProps> = ({
   };
 
   return (
-    <div className="text-[#263646] bg-[#fff] shadow-md transition">
+    <div className="text-gray-800 bg-white shadow-md transition">
       <div
         className="flex justify-between items-center shadow-sm py-5 px-4 sm:px-8 text-xs xs:text-sm sm:text-base font-[500] cursor-pointer"
         onClick={handleAccordionToggle}>

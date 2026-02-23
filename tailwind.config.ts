@@ -18,26 +18,64 @@ const config: Config = {
         transparent: "transparent",
         current: "currentColor",
 
-        /* ========== Dractex Brand Foundation ========== */
-        // The deep navy blue seen in the "Maintenance" banner
+        /* ========== Brand Foundation ========== */
         brand: {
           navy: "#002D5B",
-          blue: "#004B93", // Standard blue for buttons/icons
-          light: "#E6F0F9", // Light blue for hover states/bg
+          blue: "#004B93",
+          light: "#E6F0F9",
         },
 
-        background: "#FFFFFF", // Main site background
-        surface: "#FFFFFF", // Product cards
-        panel: "#FDFBFA", // The soft off-white/beige "Services" section
-        dark: "#0A0A0A", // For high-contrast text and footers
+        background: "#FFFFFF",
+        surface: "#FFFFFF",
+        panel: "#FDFBFA",
 
+        /* ========== Primary – Hot Pink (dominant landing-page accent) ========== */
         primary: {
-          100: "#004B93", // Main Button Blue
-          200: "#003A72",
-          300: "#002D5B", // Deep Navy
-          400: "#001F3F",
-          DEFAULT: "#004B93",
+          DEFAULT: "#E91E8C",
+          hover: "#d4177f",
+          light: "#FDF7FD",
         },
+
+        /* ========== Secondary – Purples ========== */
+        secondary: {
+          DEFAULT: "#4834D4", // Sale section purple
+          light: "#6C5CE7", // Trust badges purple
+        },
+
+        /* ========== Dark – Navy / Deep backgrounds ========== */
+        dark: {
+          DEFAULT: "#1A1A2E", // Dark navy cards/banners
+          deep: "#002B5B", // Deep navy (maintenance banner)
+          text: "#0A0A0A", // High-contrast text
+        },
+
+        /* ========== Neutral – Grays, borders, surfaces ========== */
+        neutral: {
+          DEFAULT: "#F5F5F5", // Light gray backgrounds
+          border: "#E9E9E9", // Borders and dividers
+          bg: "#F9FAFB", // Alternating row backgrounds
+          surface: "#FAFAFA", // Section header backgrounds
+          slider: "#E9E9E9", // Slider track
+          card: "#F8F9FA", // Card image backgrounds
+        },
+
+        /* ========== Status – Feedback colors ========== */
+        status: {
+          pending: "#FFBD00",
+          pendingBg: "#FFBD001F",
+          success: "#32A071",
+          successBg: "#D1FAE5",
+          successBgAlt: "#32A0711F",
+          successIcon: "#0596691F",
+          error: "#E01020",
+          errorBg: "#E010201F",
+        },
+
+        /* ========== Misc ========== */
+        link: "#CB287F",
+        accent: "#004B93",
+        price: "#002D5B",
+        whatsapp: "#25D366",
 
         // Tech-focused Grays
         gray: {
@@ -64,11 +102,6 @@ const config: Config = {
           DEFAULT: "#EF4444",
           dark: "#DC2626",
         },
-
-        // Accents from the design
-        accent: "#004B93",
-        price: "#002D5B", // Deep navy for price text
-        whatsapp: "#25D366",
       },
 
       animation: {
@@ -96,10 +129,10 @@ const config: Config = {
         light: {
           colors: {
             primary: {
-              DEFAULT: "#002D5B",
+              DEFAULT: "#E91E8C",
               foreground: "#FFFFFF",
             },
-            focus: "#004B93",
+            focus: "#d4177f",
           },
         },
       },

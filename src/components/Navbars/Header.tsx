@@ -260,19 +260,19 @@ const Header = () => {
         <div className="hidden slg:block h-[3px] bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400" />
 
         {/* Mobile Header (Hidden on Laptop) */}
-        <div className="slg:hidden flex flex-col w-full p-4 gap-3 bg-black">
+        <div className="slg:hidden flex flex-col w-full p-4 gap-3 bg-dark">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <FiMenu
                 className="text-2xl text-white"
                 onClick={() => setDrawerVisible(true)}
               />
-              <LogoImage className="!w-[30px] brightness-200" />
+              <LogoImage className="!w-[30px] brightness-110" />
             </div>
             <div onClick={onOpenCart} className="relative">
               <FiShoppingBag className="text-2xl text-white" />
               {totalItems > 0 && (
-                <span className="absolute -top-2 -right-2 size-4 bg-blue-600 rounded-full text-[9px] flex items-center justify-center text-white">
+                <span className="absolute -top-2 -right-2 size-4 bg-primary rounded-full text-[9px] flex items-center justify-center text-white">
                   {totalItems}
                 </span>
               )}
@@ -282,13 +282,13 @@ const Header = () => {
             <input
               type="text"
               placeholder="Search items..."
-              className="w-full h-full text-sm bg-gray-100 rounded-lg px-4 border-none outline-none focus:ring-2 focus:ring-primary-100"
+              className="w-full h-full text-sm bg-gray-100/10 text-white rounded-lg px-4 border border-white/10 outline-none focus:ring-2 focus:ring-primary placeholder:text-gray-400"
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             />
             {isPending ?
-              <ImSpinner2 className="absolute right-3 top-1/3 text-primary-100 animate-spin" />
+              <ImSpinner2 className="absolute right-3 top-1/3 text-primary animate-spin" />
             : <FiSearch className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" />
             }
           </div>

@@ -10,7 +10,7 @@ import React, { useEffect, useState, useTransition } from "react";
 import { useCart } from "react-use-cart";
 
 export const Loader = () => (
-  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full">
+  <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 w-full">
     {Array.from({ length: 4 }).map((_, i) => (
       <div key={i} className="animate-pulse">
         <div className="aspect-square bg-gray-200 rounded-lg mb-4" />
@@ -67,7 +67,7 @@ const SortedProducts = () => {
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6">
           {isLoading ?
             <Loader />
           : popularProducts.slice(0, 4).map((product: ProductType) => {
@@ -83,7 +83,7 @@ const SortedProducts = () => {
                   {/* Image Container */}
                   <Link
                     href={`/home-item/product/${slugDesc}-${product.id}`}
-                    className="relative aspect-square bg-[#F5F5F5] rounded-lg overflow-hidden flex items-center justify-center mb-4">
+                    className="relative aspect-square bg-neutral rounded-lg overflow-hidden flex items-center justify-center mb-4">
                     {/* AVAILABLE Badge */}
                     {product?.stock_status === "instock" && (
                       <span className="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded z-10">
@@ -132,7 +132,7 @@ const SortedProducts = () => {
                           image: product?.images?.[0]?.src,
                         })
                       }
-                      className="w-full bg-[#E91E8C] hover:bg-[#d4177f] text-white text-xs sm:text-sm font-bold py-2.5 rounded transition-colors cursor-pointer">
+                      className="w-full bg-primary hover:bg-primary-hover text-white text-xs sm:text-sm font-bold py-2.5 rounded transition-colors cursor-pointer">
                       {cartItem ? "Added ✓" : "Add to cart"}
                     </button>
                   )}
@@ -143,9 +143,9 @@ const SortedProducts = () => {
         </div>
       </div>
       {/* ─── Sale Section — Purple Background ─── */}
-      <div className="w-full bg-[#4834D4] py-10 sm:py-16">
+      <div className="w-full bg-secondary py-10 sm:py-16 mt-8 sm:mt-0">
         <div className="max-w-[1256px] mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-6">
             {isLoading ?
               Array.from({ length: 3 }).map((_, i) => (
                 <div key={i} className="animate-pulse">
@@ -164,8 +164,8 @@ const SortedProducts = () => {
                     key={product.id}
                     className="group flex flex-col bg-white rounded-lg overflow-hidden">
                     {/* Dark Header with Price */}
-                    <div className="bg-[#1A1A2E] px-4 py-3">
-                      <span className="text-[#E91E8C] font-black text-lg sm:text-xl tracking-wide">
+                    <div className="bg-dark px-4 py-3">
+                      <span className="text-primary font-black text-lg sm:text-xl tracking-wide">
                         {price ?
                           <>
                             <FormatMoney2 value={price} /> ONLY!
@@ -177,9 +177,9 @@ const SortedProducts = () => {
                     {/* Image */}
                     <Link
                       href={`/home-item/product/${slugDesc}-${product.id}`}
-                      className="relative aspect-square bg-[#F5F5F5] flex items-center justify-center">
+                      className="relative aspect-square bg-neutral flex items-center justify-center">
                       {/* SALE Badge */}
-                      <span className="absolute top-3 left-3 bg-[#E91E8C] text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded z-10">
+                      <span className="absolute top-3 left-3 bg-primary text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded z-10">
                         Sale
                       </span>
                       <Picture
@@ -193,7 +193,7 @@ const SortedProducts = () => {
                     <div className="p-4 flex flex-col gap-3">
                       <Link
                         href={`/home-item/product/${slugDesc}-${product.id}`}
-                        className="text-sm font-semibold text-black line-clamp-2 hover:text-[#E91E8C] transition-colors leading-snug"
+                        className="text-sm font-semibold text-black line-clamp-2 hover:text-primary transition-colors leading-snug"
                         dangerouslySetInnerHTML={{
                           __html: product?.name,
                         }}
@@ -211,7 +211,7 @@ const SortedProducts = () => {
                               image: product?.images?.[0]?.src,
                             })
                           }
-                          className="w-full bg-[#E91E8C] hover:bg-[#d4177f] text-white text-xs sm:text-sm font-bold py-2.5 rounded transition-colors cursor-pointer">
+                          className="w-full bg-primary hover:bg-primary-hover text-white text-xs sm:text-sm font-bold py-2.5 rounded transition-colors cursor-pointer">
                           {cartItem ? "Added ✓" : "Add to cart"}
                         </button>
                       )}
