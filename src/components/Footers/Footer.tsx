@@ -171,7 +171,7 @@ const Footer = () => {
         <hr className="w-full bg-primary-400/40" />
       </div>
 
-      <div className="mx-auto flex w-full flex-col slg:hidden mb-16">
+      <div className="mx-auto flex w-full flex-col slg:hidden mb-4">
         <section className="flex flex-col gap-8 mt-6 px-6">
           <div className="flex flex-col gap-6">
             <div className="">
