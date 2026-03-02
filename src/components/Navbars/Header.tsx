@@ -135,11 +135,7 @@ const Header = () => {
           </nav>
 
           {/* Center Logo */}
-          <Link
-            href="/"
-            className="text-2xl font-bold tracking-[0.2em] text-black uppercase">
-            LOGO
-          </Link>
+          <LogoImage className="!w-[30px] lg:!w-[40px]" />
 
           {/* Right Nav Links + Icons */}
           <div className="flex items-center gap-8">

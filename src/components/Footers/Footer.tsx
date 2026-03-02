@@ -217,7 +217,7 @@ const Footer = () => {
       </div>
 
       <div className="mx-auto max-w-[1156px]">
-        <div className="flex items-center justify-center py-2">
+        <div className="flex items-center justify-center py-2 px-4">
           <div className="text-gray-700 sm:font-mono text-xs leading-[1.2]">
             Copyright&nbsp;@ {currentYear}&nbsp;{CompanyName} Alright Reserved.
           </div>
