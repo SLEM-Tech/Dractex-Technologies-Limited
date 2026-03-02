@@ -193,7 +193,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-x-8 gap-y-10 pt-4 border-t border-gray-100">
+          <div className="grid grid-cols-1 min-[400px]:grid-cols-2 gap-x-8 gap-y-8 pt-4 border-t border-gray-100">
             {footerData.map((section, index) => (
               <div key={index} className="flex flex-col gap-4">
                 <span className="text-black font-bold text-sm tracking-wide uppercase">
@@ -216,10 +216,11 @@ const Footer = () => {
         </section>
       </div>
 
-      <div className="mx-auto max-w-[1156px]">
-        <div className="flex items-center justify-center py-2 px-4">
-          <div className="text-gray-700 sm:font-mono text-xs leading-[1.2]">
-            Copyright&nbsp;@ {currentYear}&nbsp;{CompanyName} Alright Reserved.
+      <div className="mx-auto max-w-[1156px] w-full">
+        <div className="flex items-center justify-center py-4 px-6">
+          <div className="text-gray-700 sm:font-mono text-[11px] sm:text-xs leading-[1.4] text-center">
+            Copyright&nbsp;@ {currentYear}&nbsp;{CompanyName} All Rights
+            Reserved.
           </div>
         </div>
       </div>

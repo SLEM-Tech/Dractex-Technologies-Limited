@@ -114,7 +114,7 @@ const Header = () => {
         <div className="hidden slg:flex items-center justify-between w-full py-4 max-w-[1440px] px-8 mx-auto">
           {/* Left Nav Links */}
           <nav className="flex items-center gap-8">
-            {headerNavLinks.slice(0, 3).map((link) => (
+            {headerNavLinks.slice(0, 2).map((link) => (
               <Link
                 key={link.id}
                 href={link.href}
@@ -140,7 +140,7 @@ const Header = () => {
           {/* Right Nav Links + Icons */}
           <div className="flex items-center gap-8">
             <nav className="flex items-center gap-8">
-              {headerNavLinks.slice(3).map((link) => (
+              {headerNavLinks.slice(2).map((link) => (
                 <Link
                   key={link.id}
                   href={link.href}
