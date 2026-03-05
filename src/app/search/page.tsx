@@ -21,19 +21,17 @@ const Page = () => {
 
   return (
     <AppLayout className="">
-      <main className="bg-white flex flex-col items-center relative justify-center w-full pt-10 mt-28 slg:mt-32 xl:pt-5 mx-auto max-w-[1156px] min-h-[50vh] mb-20 px-4 lg:px-2">
+      <main className="bg-gray-50 flex flex-col items-center relative justify-center w-full pt-10 mt-28 slg:mt-32 xl:pt-5 mx-auto max-w-[1156px] min-h-[50vh] mb-20 px-4 lg:px-2">
         {ProductsTotal === 0 ?
           <div className="">
-            <h3 className="text-2xl text-center tracking-tight text-secondary-200">
+            <h3 className="text-2xl text-center tracking-tight text-gray-800 font-semibold">
               Sorry, we can not find this product 😞
             </h3>
           </div>
         : <>
-            <div className="flex w-full py-3 px-5 bg-primary-100/30 text-base mb-4">
+            <div className="flex w-full py-3 px-5 bg-black text-white text-base mb-4 rounded-lg font-medium">
               Total&nbsp;
-              <span className="font-black text-primary-100">
-                {ProductsTotal}
-              </span>
+              <span className="font-black text-primary">{ProductsTotal}</span>
               &nbsp;items Found
             </div>
             <SearchDataOutput data={Products} isloading={ProductWpIsLoading} />

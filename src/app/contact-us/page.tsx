@@ -22,7 +22,7 @@ import { Metadata } from "next";
 const page = () => {
   return (
     <AppLayout>
-      <main className="bg-black text-white mx-auto w-full mt-28 slg:mt-36 min-h-screen pt-4">
+      <main className="bg-black text-white mx-auto w-full min-h-screen pt-4">
         <h3 className="font-semibold text-xl sm:text-2xl slg:text-3xl tracking-tighter text-center mt-10 text-white">
           Contact Us
         </h3>

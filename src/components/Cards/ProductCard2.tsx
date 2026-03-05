@@ -80,7 +80,7 @@ const ProductCard2 = ({
         {/* Title / Description */}
         <Link
           href={`/home-item/product/${slugDesc}-${id}`}
-          className="text-sm font-semibold text-slate-800 line-clamp-2 mb-3 h-10 hover:text-primary-100 transition-colors leading-snug"
+          className="text-sm font-bold text-black line-clamp-2 mb-3 h-10 hover:text-primary-100 transition-colors leading-snug"
           dangerouslySetInnerHTML={{ __html: description }}
         />
 
@@ -88,7 +88,7 @@ const ProductCard2 = ({
         <div className="mt-auto flex items-end justify-between gap-2">
           <div className="flex flex-col">
             {oldAmount && (
-              <span className="text-[11px] line-through text-slate-400 font-medium mb-0.5">
+              <span className="text-[11px] line-through text-gray-500 font-semibold mb-0.5">
                 <FormatMoney2 value={parseInt(oldAmount)} />
               </span>
             )}
