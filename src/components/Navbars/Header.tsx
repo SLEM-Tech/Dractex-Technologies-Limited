@@ -57,6 +57,7 @@ const Header = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [drawerVisible, setDrawerVisible] = useState(false);
   const [searchValue, setSearchValue] = useState("");
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const { data: customer } = useCustomer("");
   const wc_customer_info = useMemo(
@@ -164,11 +165,42 @@ const Header = () => {
 
             {/* Icons */}
             <div className="flex items-center gap-5 ml-4 border-l border-gray-200 pl-6">
-              <button
-                onClick={handleSearch}
-                className="text-gray-600 hover:text-black transition cursor-pointer">
-                <FiSearch className="text-lg" />
-              </button>
+              {/* Expandable Desktop Search */}
+              <div className="relative flex items-center">
+                <div
+                  className={`flex items-center overflow-hidden transition-all duration-300 ease-in-out ${
+                    isSearchOpen ?
+                      "w-[220px] opacity-100 mr-1"
+                    : "w-0 opacity-0"
+                  }`}>
+                  <input
+                    type="text"
+                    placeholder="Search items..."
+                    className="w-full h-8 text-sm bg-gray-100 rounded-lg px-3 border border-gray-200 outline-none focus:ring-2 focus:ring-primary placeholder:text-gray-400 transition"
+                    value={searchValue}
+                    onChange={(e) => setSearchValue(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") handleSearch();
+                      if (e.key === "Escape") {
+                        setIsSearchOpen(false);
+                        setSearchValue("");
+                      }
+                    }}
+                    autoFocus={isSearchOpen}
+                  />
+                </div>
+                <button
+                  onClick={() => {
+                    if (isSearchOpen && searchValue) {
+                      handleSearch();
+                    } else {
+                      setIsSearchOpen(!isSearchOpen);
+                    }
+                  }}
+                  className="text-gray-600 hover:text-black transition cursor-pointer">
+                  <FiSearch className="text-lg" />
+                </button>
+              </div>
 
               {/* User Dropdown */}
               <Menu as="div" className="relative inline-block text-left">
